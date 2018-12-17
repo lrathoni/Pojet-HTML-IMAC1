@@ -11,55 +11,64 @@
 	<body>
         <h1>HOROSCOPE</h1>
         <div id="page">
-            <h2>blablabla explications</h2>
+            <h2 class="blabla"> Salut visiteur! Tu veux savoir ton horoscope? Tu te dis "de toute façon je n'y crois pas"? Et bien détrompe toi! Nous certifions sur l'honneur (de Louisa) qu'il s'agit de la vérité et rien que de la vérité!  </h2>
+            <h3 class="blabla"> [ PS: Nous ne sommes pas responsables en cas de malchance, d'accidents ou de mort pré-annoncée par nos astres ! ] </h3>
+            <h4 class="blabla"> Sur ces belles paroles, bonne prédiction ! </h4>            
             <div id="zodiac">
-                <section id="choisir_signe">
                     <ul id="votre_signe">
                         <li id="people" class="people"> Votre signe :
                                 <select id="choix" class="choix">
-                                    <option value="signe0">       </option>
-                                    <option value="signe">Bélier</option>
-                                    <option value="signe">Taureau</option>
-                                    <option value="signe">Gémeaux</option>
-                                    <option value="signe">Cancer</option>
-                                    <option value="signe">Lion</option>
-                                    <option value="signe">Vierge</option>
-                                    <option value="signe">Balance</option>
-                                    <option value="signe">Scorpion</option>
-                                    <option value="signe">Sagittaire</option>
-                                    <option value="signe">Capricorne</option>
-                                    <option value="signe">Verseau</option>
-                                    <option value="signe">Poisson</option>
+                                    <option value="Default">Default</option>
+                                    <option value="Bélier">Bélier</option>
+                                    <option value="Taureau">Taureau</option>
+                                    <option value="Gémeaux">Gémeaux</option>
+                                    <option value="Cancer">Cancer</option>
+                                    <option value="Lion">Lion</option>
+                                    <option value="Vierge">Vierge</option>
+                                    <option value="Balance">Balance</option>
+                                    <option value="Scorpion">Scorpion</option>
+                                    <option value="Sagittaire">Sagittaire</option>
+                                    <option value="Capricorne">Capricorne</option>
+                                    <option value="Verseau">Verseau</option>
+                                    <option value="Poisson">Poisson</option>
                                 </select>                        
                         </li>
                     </ul>
-                </section>
-                <section id="icon" class="select-icon">
-                        <img id="Point_interrogation" class="picture-active" alt="signe-du-zodiaque" src="PNG/Point_interrogation.png"/>
-                        <img id="Bélier" class="picture-active" alt="signe-du-zodiaque" src="PNG/Bélier.png"/>
-                        <img id="Taureau" class="picture-active" alt="signe-du-zodiaque" src="PNG/Taureau.png"/>
-                        <img id="Gémeaux" class="picture-active" alt="signe-du-zodiaque" src="PNG/Gémeaux.png"/>
-                        <img id="Cancer" class="picture-active" alt="signe-du-zodiaque" src="PNG/Cancer.png"/>
-                        <img id="Lion" class="picture-active" alt="signe-du-zodiaque" src="PNG/Lion.png"/>
-                        <img id="Vierge" class="picture-active" alt="signe-du-zodiaque" src="PNG/Vierge.png"/>
-                        <img id="Balance" class="picture-active" alt="signe-du-zodiaque" src="PNG/Balance.png"/>
-                        <img id="Scorpion" class="picture-active" alt="signe-du-zodiaque" src="PNG/Scorpion.png"/>
-                        <img id="Sagittaire" class="picture-active" alt="signe-du-zodiaque" src="PNG/Sagittaire.png"/>
-                        <img id="Capricorne" class="picture-active" alt="signe-du-zodiaque" src="PNG/Capricorne.png"/>
-                        <img id="Verseau" class="picture-active" alt="signe-du-zodiaque" src="PNG/Verseau.png"/>
-                        <img id="Poisson" class="picture-active" alt="signe-du-zodiaque" src="PNG/Poisson.png"/>
-                </section>
+                        <img id="Default" class="signe picture-active" alt="signe-du-zodiaque" src="PNG/Default.png"/>
+                        <img id="Bélier" class="signe" alt="signe-du-zodiaque" src="PNG/Bélier.png"/>
+                        <img id="Taureau" class="signe" alt="signe-du-zodiaque" src="PNG/Taureau.png"/>
+                        <img id="Gémeaux" class="signe" alt="signe-du-zodiaque" src="PNG/Gémeaux.png"/>
+                        <img id="Cancer" class="signe" alt="signe-du-zodiaque" src="PNG/Cancer.png"/>
+                        <img id="Lion" class="signe" alt="signe-du-zodiaque" src="PNG/Lion.png"/>
+                        <img id="Vierge" class="signe" alt="signe-du-zodiaque" src="PNG/Vierge.png"/>
+                        <img id="Balance" class="signe" alt="signe-du-zodiaque" src="PNG/Balance.png"/>
+                        <img id="Scorpion" class="signe" alt="signe-du-zodiaque" src="PNG/Scorpion.png"/>
+                        <img id="Sagittaire" class="signe" alt="signe-du-zodiaque" src="PNG/Sagittaire.png"/>
+                        <img id="Capricorne" class="signe" alt="signe-du-zodiaque" src="PNG/Capricorne.png"/>
+                        <img id="Verseau" class="signe" alt="signe-du-zodiaque" src="PNG/Verseau.png"/>
+                        <img id="Poisson" class="signe" alt="signe-du-zodiaque" src="PNG/Poisson.png"/>
             </div>
-            <h3>blablablablabla </h3>
+            <h5 class="blabla"> Posez également vos questions à notre très chère voyante : la seule et l'unique... Madame Roxane ! </h5>
             <div id=form>
                 <section id="question">
-                    Posez une question à madame Roxane :
+                    Posez une question à Madame Roxane : 
                     <input id='inputQuestion' value="" type="text"/>
                 </section>
                 <section id="button">
-                    <button id="submit" type="submit" value="clic_sur_roxane" class="clic"> <img id="roxane" src="PNG/Point_interrogation.png"/></button>
+                    <button id="submit" type="submit" value="clic" class="clic"></button>
                 </section>
             </div>
         </div>
+        <div id='mask'>
+            <div id='result' class='afficher'>
+                <div id='cadre'>
+                    <div id ='icon2' class="select-icon2"></div>
+                    <div id='daily-horoscope'></div>
+                    <div id='reponse' class='mystere'></div>
+                    <div id='smiley' class="verdict"></div>
+                </div>
+            </div>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>

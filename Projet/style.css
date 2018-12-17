@@ -9,19 +9,23 @@ h1 {
     text-align: center;
 }
 
+.blabla {
+    font-size: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
 #zodiac {
-    display: flex;
+    display: grid;
+    grid-template-columns: 50% 50%;
     justify-content: center;
     height: 300px;
     align-items: center;
     margin: 0;
-
-
 }
 
 #votre_signe {
     font-size: 30px;
-
 }
 
 #choix {
@@ -43,27 +47,38 @@ h1 {
     list-style-type: none;
 }
 
-#icon{
+
+#icon2{
     height: inherit;
+    background: `url('${activePicture.src}') 1%`;
 }
 
+.backgroundwindow {
 
-SECTION.select-icon{
+}
+
+/*SECTION.select-icon{
     flex-basis: 50%;
     display:flex;
     justify-content: center;
     align-items: center;
 }
+*/
 
 
 .picture-active {
     position: relative;
     width: 150px;
     height: auto;
+    display : block !important;
 }
 
-#Bélier, #Taureau, #Gémeaux, #Cancer, #Lion, #Vierge, #Balance, #Scorpion, #Sagittaire, #Capricorne, #Verseau, #Poisson {
+
+
+.signe {
     display: none;
+    width: 150px;
+    height: 150px;
 }
 
 #inputQuestion{
@@ -100,3 +115,63 @@ SECTION.select-icon{
      width: 50px;
      height: auto;
  }
+
+#mask {
+    display: none;
+}
+
+#mask.modal-active{
+    display: initial!important;
+}
+#result {
+    position: fixed;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.6);
+    top: 0;
+    left: 0;
+    right : 0;
+    bottom : 0;
+    animation: shade 2s forwards;
+}
+
+#cadre{
+    justify-content: space-evenly;
+    background: lightpink;
+    width: 400px;
+    height: 500px;
+    border-radius: 25px;
+    color :ivory;
+    text-align: center;
+    animation: showUp 2s forwards;
+    position: relative;
+    display:flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	border-radius: 4%;
+    margin-top: 10%;
+	animation-duration: 1s;
+	animation-name: goUpAndCenter;
+	transition-timing-function: ease-out;
+}
+
+@keyframes goUpAndCenter{
+	from{
+		margin-top: 100%;		
+	}
+}
+
+
+.modal-active{
+    width: 150PX;
+    height auto;
+}
+
+#dailyhoroscope{
+    
+}
