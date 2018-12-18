@@ -3,10 +3,24 @@ const select = document.querySelector('#choix');
 const inputSubmit = document.querySelector('#submit');
 const Mask = document.querySelector('#mask');
 const icon2 = document.querySelector('#icon2');
+const QuestionWrite = document.querySelector('#question-write');
 const inputQuestion = document.querySelector('#inputQuestion');
+
+const changeValue =
+      (value, element) => element.innerHTML = value || 'QUESTION';
+      
+//we have two parameters, so we create a function
+// to pass evt as a parameter
+inputQuestion.addEventListener(
+  'keyup',
+  evt => changeValue(evt.target.value, question)
+);
+
 
 //picture_active
 const handleModalClick = e => {
+  e.preventDefault();
+  QuestionWrite.innerHTML = question.innerHTML;
     const activePicture =
         document.querySelector('.picture-active');
   // here we are using string templating
@@ -17,16 +31,14 @@ const handleModalClick = e => {
 };
 
 
-// event is pass implicitly/automatically to the
-// callback function
+
 inputSubmit.addEventListener(
   'click',
   handleModalClick
-);
+  );
 
 const changeImage = e => {
   const value = e.target.value;
-    console.log(value);
   const activePicture =
         document.querySelector('.picture-active');
   activePicture.classList.remove('picture-active');
@@ -37,21 +49,28 @@ const changeImage = e => {
 
 
 //modale
-select.addEventListener(
-      'change',
-      e => {loadDoc() ; changeImage (e)}
-    );
+select.addEventListener('change',e => {
+  loadDoc();
+  changeImage (e);
+});
 
+var monJson;
 
 function loadDoc() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
+          monJson = JSON.parse(this.responseText);  
         document.getElementById('daily-horoscope').innerHTML =
-        this.responseText;
+        monJson.dailyhoroscope[document.querySelector('#choix').value];
         }
     };
-    xhttp.open('GET', 'https://horoscopes-and-astrology.com/template/?&width=499&widthunit=px&backgroundcolor=rgba(60, 60, 60,10)&textcolor=ivory&border=ON&image=0&imageunit=px&borderradius=20&padding=&margin=', true);
+    xhttp.open('GET', 'https://www.horoscopes-and-astrology.com/json', true);
     xhttp.send();
 }
 
+//$.getJSON("https://horoscopes-and-astrology.com/template/?&width=499&widthunit=px&backgroundcolor=rgba(60, 60, 60,10)&textcolor=ivory&border=ON&image=0&imageunit=px&borderradius=20&padding=&margin=", $("div.cadre")).done(function(data)
+
+//this.ajax("https://horoscopes-and-astrology.com/template/?&width=499&widthunit=px&backgroundcolor=rgba(60, 60, 60,10)&textcolor=ivory&border=ON&image=0&imageunit=px&borderradius=20&padding=&margin=").done(function(response){
+ // console.log(response);
+//});
