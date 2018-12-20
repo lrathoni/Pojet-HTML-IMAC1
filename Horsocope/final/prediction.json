@@ -1,0 +1,16 @@
+var predictions = {
+        "reponse": [
+            "Oui.",
+            "Non.",
+            "Peut-être.",
+			"Jamais.",
+			"Bientôt.",
+			"Je n'ai pas compris votre question.",
+			"42.",
+			"Je ne réponds pas aux grossièretés !",
+			"La réponse se trouve sous votre nez, il suffit de se moucher."
+        ]
+    }
+
+var random = predictions.reponse[Math.floor(Math.random() * predictions.reponse.length)];
+console.log(random)
